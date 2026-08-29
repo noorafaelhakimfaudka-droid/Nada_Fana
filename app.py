@@ -336,12 +336,19 @@ st.markdown("""
         display: none !important;
     }
     
-    /* Mewarnai tombol buka sidebar agar terlihat di background gelap */
-    button[kind="header"] {
+    /* Mewarnai tombol buka sidebar agar terlihat sangat jelas di background gelap */
+    [data-testid="collapsedControl"], 
+    [data-testid="baseButton-header"] {
         color: #d4af37 !important;
+        background-color: rgba(20, 20, 20, 0.9) !important;
+        border: 1px solid rgba(212, 175, 55, 0.5) !important;
+        border-radius: 4px !important;
     }
-    [data-testid="collapsedControl"] svg {
+    [data-testid="collapsedControl"] svg,
+    [data-testid="baseButton-header"] svg,
+    button[kind="header"] svg {
         fill: #d4af37 !important;
+        stroke: #d4af37 !important;
         color: #d4af37 !important;
     }
 </style>
@@ -667,7 +674,7 @@ if selected_index is not None:
             margin=dict(l=80, r=80, t=40, b=40),
             height=450,
         )
-        st.plotly_chart(fig_radar, use_container_width=True)
+        st.plotly_chart(fig_radar, use_container_width=True, config={'displayModeBar': False})
 
     with tab_scatter:
         scatter_data = []
@@ -721,7 +728,7 @@ if selected_index is not None:
         fig_scatter.add_annotation(x=0.15, y=0.05, text=" Mellow & Sendu", showarrow=False, font=dict(color='rgba(139,148,158,0.4)', size=11))
         fig_scatter.add_annotation(x=0.85, y=0.05, text=" Santai & Bahagia", showarrow=False, font=dict(color='rgba(139,148,158,0.4)', size=11))
 
-        st.plotly_chart(fig_scatter, use_container_width=True)
+        st.plotly_chart(fig_scatter, use_container_width=True, config={'displayModeBar': False})
 
     with tab_compare:
         table_data = []
@@ -793,7 +800,7 @@ else:
             margin=dict(l=40, r=20, t=30, b=40), height=300,
             title=dict(text="Distribusi Valence (Emosi)", font=dict(color='#ffffff', size=14)),
         )
-        st.plotly_chart(fig_hist, use_container_width=True)
+        st.plotly_chart(fig_hist, use_container_width=True, config={'displayModeBar': False})
 
     with col2:
         fig_hist2 = px.histogram(
@@ -809,7 +816,7 @@ else:
             margin=dict(l=40, r=20, t=30, b=40), height=300,
             title=dict(text="Distribusi Akustik", font=dict(color='#ffffff', size=14)),
         )
-        st.plotly_chart(fig_hist2, use_container_width=True)
+        st.plotly_chart(fig_hist2, use_container_width=True, config={'displayModeBar': False})
 
     # Artist top chart
     st.markdown('<div class="section-header"><span class="section-icon">🏆</span>15 Artis Teratas</div>', unsafe_allow_html=True)
@@ -832,4 +839,4 @@ else:
         margin=dict(l=10, r=20, t=20, b=40), height=420,
         coloraxis_showscale=False,
     )
-    st.plotly_chart(fig_bar, use_container_width=True)
+    st.plotly_chart(fig_bar, use_container_width=True, config={'displayModeBar': False})
