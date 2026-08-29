@@ -324,7 +324,6 @@ st.markdown("""
     /* ── Hide streamlit branding ── */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    header {visibility: hidden;}
 
     /* ── Plotly chart backgrounds ── */
     .js-plotly-plot .plotly .modebar {
