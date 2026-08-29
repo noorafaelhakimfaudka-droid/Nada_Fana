@@ -330,6 +330,20 @@ st.markdown("""
     .js-plotly-plot .plotly .modebar {
         background: transparent !important;
     }
+    /* ── UI Fixes ── */
+    /* Menyembunyikan tombol fullscreen bawaan pada chart */
+    button[title="View fullscreen"] {
+        display: none !important;
+    }
+    
+    /* Mewarnai tombol buka sidebar agar terlihat di background gelap */
+    button[kind="header"] {
+        color: #d4af37 !important;
+    }
+    [data-testid="collapsedControl"] svg {
+        fill: #d4af37 !important;
+        color: #d4af37 !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
