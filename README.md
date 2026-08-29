@@ -1,6 +1,6 @@
 # Nada Fana | End-to-End Data Science Project: Indie Mellow Music Engine
 
-> **💡 Catatan Penulis (Transparency Note):** 
+> **Catatan Penulis (Transparency Note):** 
 > Fokus utama saya dalam proyek ini adalah pada tahap **riset Data Science, Exploratory Data Analysis (EDA), dan perancangan pemodelan Machine Learning & NLP** yang seluruhnya dikerjakan di dalam file `Nada Fana.ipynb`. 
 > 
 > Adapun aplikasi antarmuka (Streamlit UI) yang berada di file `app.py` didesain dan diimplementasikan dengan bantuan AI Assistant (Gemini) sebagai *Proof of Concept* untuk mendemonstrasikan hasil model secara visual dan interaktif.
@@ -11,7 +11,7 @@ Berbeda dengan algoritma *streaming* konvensional, proyek ini tidak mengandalkan
 
 ---
 
-## 🔬 Fokus Utama: Metodologi Data Science (Jupyter Notebook)
+## Fokus Utama: Metodologi Data Science (Jupyter Notebook)
 
 Seluruh logika pemikiran, eksperimen, dan *data wrangling* dapat ditemukan di dalam `Nada Fana.ipynb`. Tahapan metodologinya meliputi:
 
@@ -30,7 +30,7 @@ Seluruh logika pemikiran, eksperimen, dan *data wrangling* dapat ditemukan di da
 
 ---
 
-## 💻 Hasil Deployment (AI-Assisted App)
+## Hasil Deployment (AI-Assisted App)
 
 Sebagai langkah *deployment*, model algoritma dan matriks TF-IDF diekspor (pickle) ke dalam file `database_lagu.pkl` dan `memori_ai.pkl`. Dibantu oleh AI, hasil ini kemudian dibungkus menjadi sebuah **Dashboard Interaktif Streamlit** yang menyajikan visualisasi Radar dan Scatter Plot untuk end-user.
 
@@ -40,7 +40,7 @@ Sebagai langkah *deployment*, model algoritma dan matriks TF-IDF diekspor (pickl
 
 ---
 
-## 🚀 Replikasi Proyek (Lokal)
+## Replikasi Proyek (Lokal)
 
 Untuk mengeksekusi *pipeline* data science dan menjalankan aplikasinya di komputer Anda:
 
