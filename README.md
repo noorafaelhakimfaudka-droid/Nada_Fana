@@ -46,8 +46,8 @@ Untuk mengeksekusi *pipeline* data science dan menjalankan aplikasinya di komput
 
 1. **Clone repository ini:**
    ```bash
-   git clone https://github.com/USERNAME_ANDA/nada-fana.git
-   cd nada-fana
+   git clone https://github.com/noorafaelhakimfaudka-droid/Nada_Fana.git
+   cd Nada_Fana
    ```
 2. **Install environment Python:**
    ```bash
