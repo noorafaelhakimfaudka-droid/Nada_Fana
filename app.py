@@ -336,20 +336,9 @@ st.markdown("""
         display: none !important;
     }
     
-    /* Mewarnai tombol buka sidebar agar terlihat sangat jelas di background gelap */
-    [data-testid="collapsedControl"], 
-    [data-testid="baseButton-header"] {
-        color: #d4af37 !important;
-        background-color: rgba(20, 20, 20, 0.9) !important;
-        border: 1px solid rgba(212, 175, 55, 0.5) !important;
-        border-radius: 4px !important;
-    }
-    [data-testid="collapsedControl"] svg,
-    [data-testid="baseButton-header"] svg,
-    button[kind="header"] svg {
-        fill: #d4af37 !important;
-        stroke: #d4af37 !important;
-        color: #d4af37 !important;
+    /* Menyembunyikan tombol fullscreen bawaan pada chart */
+    button[title="View fullscreen"] {
+        display: none !important;
     }
 </style>
 """, unsafe_allow_html=True)
