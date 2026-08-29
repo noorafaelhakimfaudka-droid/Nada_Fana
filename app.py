@@ -340,6 +340,22 @@ st.markdown("""
     button[title="View fullscreen"] {
         display: none !important;
     }
+    
+    /* BULLETPROOF: Memastikan tombol sidebar & header selalu terlihat */
+    header[data-testid="stHeader"] {
+        background-color: transparent !important;
+    }
+    header[data-testid="stHeader"] svg {
+        fill: #d4af37 !important;
+        stroke: #d4af37 !important;
+    }
+    [data-testid="collapsedControl"] {
+        background-color: rgba(10, 10, 10, 0.9) !important;
+        border: 1px solid #d4af37 !important;
+        border-radius: 4px !important;
+        margin: 10px !important;
+        z-index: 999999 !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
