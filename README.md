@@ -1,7 +1,7 @@
 # Nada Fana | End-to-End Data Science Project: Indie Mellow Music Engine
 
 > **💡 Catatan Penulis (Transparency Note):** 
-> Fokus utama saya dalam proyek ini adalah pada tahap **riset Data Science, Exploratory Data Analysis (EDA), dan perancangan pemodelan Machine Learning & NLP** yang seluruhnya dikerjakan di dalam file `banturek_music_indie.ipynb`. 
+> Fokus utama saya dalam proyek ini adalah pada tahap **riset Data Science, Exploratory Data Analysis (EDA), dan perancangan pemodelan Machine Learning & NLP** yang seluruhnya dikerjakan di dalam file `Nada Fana.ipynb`. 
 > 
 > Adapun aplikasi antarmuka (Streamlit UI) yang berada di file `app.py` didesain dan diimplementasikan dengan bantuan AI Assistant (Gemini) sebagai *Proof of Concept* untuk mendemonstrasikan hasil model secara visual dan interaktif.
 
@@ -13,7 +13,7 @@ Berbeda dengan algoritma *streaming* konvensional, proyek ini tidak mengandalkan
 
 ## 🔬 Fokus Utama: Metodologi Data Science (Jupyter Notebook)
 
-Seluruh logika pemikiran, eksperimen, dan *data wrangling* dapat ditemukan di dalam `banturek_music_indie.ipynb`. Tahapan metodologinya meliputi:
+Seluruh logika pemikiran, eksperimen, dan *data wrangling* dapat ditemukan di dalam `Nada Fana.ipynb`. Tahapan metodologinya meliputi:
 
 ### 1. Data Ingestion & Preprocessing
 - **Sumber Data:** Dataset mentah berisi 955.000+ baris dari Spotify API (termasuk lirik dan fitur audio).
@@ -54,7 +54,7 @@ Untuk mengeksekusi *pipeline* data science dan menjalankan aplikasinya di komput
    pip install -r requirements.txt
    ```
 3. *(Opsional)* **Pelajari Riset Notebook:**
-   Buka `banturek_music_indie.ipynb` untuk melihat hasil EDA dan logika di balik pemodelan rekomendasi ini.
+   Buka `Nada Fana.ipynb` untuk melihat hasil EDA dan logika di balik pemodelan rekomendasi ini.
 4. **Jalankan Dashboard Streamlit:**
    ```bash
    python -m streamlit run app.py
