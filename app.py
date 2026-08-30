@@ -324,11 +324,36 @@ st.markdown("""
     /* ── Hide streamlit branding ── */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    header {visibility: hidden;}
 
     /* ── Plotly chart backgrounds ── */
     .js-plotly-plot .plotly .modebar {
         background: transparent !important;
+    }
+    /* ── UI Fixes ── */
+    /* Menyembunyikan tombol fullscreen bawaan pada chart */
+    button[title="View fullscreen"] {
+        display: none !important;
+    }
+    
+    /* Menyembunyikan tombol fullscreen bawaan pada chart */
+    button[title="View fullscreen"] {
+        display: none !important;
+    }
+    
+    /* BULLETPROOF: Memastikan tombol sidebar & header selalu terlihat */
+    header[data-testid="stHeader"] {
+        background-color: transparent !important;
+    }
+    header[data-testid="stHeader"] svg {
+        fill: #d4af37 !important;
+        stroke: #d4af37 !important;
+    }
+    [data-testid="collapsedControl"] {
+        background-color: rgba(10, 10, 10, 0.9) !important;
+        border: 1px solid #d4af37 !important;
+        border-radius: 4px !important;
+        margin: 10px !important;
+        z-index: 999999 !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -653,7 +678,7 @@ if selected_index is not None:
             margin=dict(l=80, r=80, t=40, b=40),
             height=450,
         )
-        st.plotly_chart(fig_radar, use_container_width=True)
+        st.plotly_chart(fig_radar, use_container_width=True, config={'displayModeBar': False})
 
     with tab_scatter:
         scatter_data = []
@@ -707,7 +732,7 @@ if selected_index is not None:
         fig_scatter.add_annotation(x=0.15, y=0.05, text=" Mellow & Sendu", showarrow=False, font=dict(color='rgba(139,148,158,0.4)', size=11))
         fig_scatter.add_annotation(x=0.85, y=0.05, text=" Santai & Bahagia", showarrow=False, font=dict(color='rgba(139,148,158,0.4)', size=11))
 
-        st.plotly_chart(fig_scatter, use_container_width=True)
+        st.plotly_chart(fig_scatter, use_container_width=True, config={'displayModeBar': False})
 
     with tab_compare:
         table_data = []
@@ -779,7 +804,7 @@ else:
             margin=dict(l=40, r=20, t=30, b=40), height=300,
             title=dict(text="Distribusi Valence (Emosi)", font=dict(color='#ffffff', size=14)),
         )
-        st.plotly_chart(fig_hist, use_container_width=True)
+        st.plotly_chart(fig_hist, use_container_width=True, config={'displayModeBar': False})
 
     with col2:
         fig_hist2 = px.histogram(
@@ -795,7 +820,7 @@ else:
             margin=dict(l=40, r=20, t=30, b=40), height=300,
             title=dict(text="Distribusi Akustik", font=dict(color='#ffffff', size=14)),
         )
-        st.plotly_chart(fig_hist2, use_container_width=True)
+        st.plotly_chart(fig_hist2, use_container_width=True, config={'displayModeBar': False})
 
     # Artist top chart
     st.markdown('<div class="section-header"><span class="section-icon">🏆</span>15 Artis Teratas</div>', unsafe_allow_html=True)
@@ -818,4 +843,4 @@ else:
         margin=dict(l=10, r=20, t=20, b=40), height=420,
         coloraxis_showscale=False,
     )
-    st.plotly_chart(fig_bar, use_container_width=True)
+    st.plotly_chart(fig_bar, use_container_width=True, config={'displayModeBar': False})
